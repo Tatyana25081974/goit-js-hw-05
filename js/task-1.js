@@ -1,23 +1,44 @@
-
-function isEnoughCapacity(products, containerSize) {
-  // Ініціалізуємо змінну для загальної кількості товарів
-  let totalItems = 0;
-
-  // Проходимо по всіх властивостях об'єкта products
-  for (let product in products) {
-    totalItems += products[product];  // Додаємо кількість товарів до загальної суми
-  }
-
-  // Порівнюємо загальну кількість товарів з контейнером
-  return totalItems <= containerSize;
-}
+const getUserNames = users => users.map(user => user.name);
 
 console.log(
-  isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8)
-); // true
+  getUserNames([
+    {
+      name: "Moore Hensley",
+      email: "moorehensley@indexia.com",
+      balance: 2811
+    },
+    {
+      name: "Sharlene Bush",
+      email: "sharlenebush@tubesys.com",
+      balance: 3821
+    },
+    {
+      name: "Ross Vazquez",
+      email: "rossvazquez@xinware.com",
+      balance: 3793
+    },
+    {
+      name: "Elma Head",
+      email: "elmahead@omatom.com",
+      balance: 2278
+    },
+    {
+      name: "Carey Barr",
+      email: "careybarr@nurali.com",
+      balance: 3951
+    },
+    {
+      name: "Blackburn Dotson",
+      email: "blackburndotson@furnigeer.com",
+      balance: 1498
+    },
+    {
+      name: "Sheree Anthony",
+      email: "shereeanthony@kog.com",
+      balance: 2764
+    },
+  ])
+); 
 
-console.log(
-  isEnoughCapacity({ apples: 4, grapes: 6, lime: 16 }, 12)
-); // false
 
 
